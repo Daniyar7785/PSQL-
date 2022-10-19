@@ -1,0 +1,7 @@
+########## CREATE A USER###########
+
+CREATE ROLE read_only_user login password '123';
+
+CERATE ROLE read_write_user login password '123';
+
+
