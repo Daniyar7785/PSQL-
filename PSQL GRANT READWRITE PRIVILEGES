@@ -1,0 +1,32 @@
+##### Grant ReadOnly privileges ######
+
+GRANT CONNECT ON DATABASE bbname TO user;
+
+GRANT USAGE ON SCHEMA public TO user;
+GRANT USAGE ON SCHEMA privatetable TO user;
+
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO user;
+GRANT SELECT ON ALL TABLES IN SCHEMA privatetable TO user;
+
+
+GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO user;
+GRANT SELECT ON ALL SEQUENCES IN SCHEMA privatetable TO user;
+
+
+
+##### Grant ReadWrite user ##########
+GRANT CONNECT ON DATABASE dbname TO user;
+
+GRANT USAGE ON SCHEMA public TO user;
+GRANT USAGE ON SCHEMA privatetable TO user;
+
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO write_user_uat;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA privatetable TO user;
+
+
+GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO user;
+GRANT SELECT ON ALL SEQUENCES IN SCHEMA privatetable TO user;
+
+
+
