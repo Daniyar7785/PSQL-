@@ -1,0 +1,8 @@
+######## CONNECT TO DB FROM PGADMIN TERMINAL#############
+
+\t
+SELECT '\connect ' || datname || '; ' ||E'\n'|| 'GRANT USAGE ON SCHEMA public TO uat_user;' 'GRANT SELCET ON ALL TABLES IN SCHEMA public TO uat_user;' 'GRANT SELECT AN ALL SEQUENCES IN SCHEMA publi
+c TO uat_user;' FROM pg_database WHERE datistemplate = false;
+
+\t
+SELECT '\connect ' || datname || '; ' ||E'\n'|| 'GRANT USAGE ON SCHEMA public TO sec_user1;' 'GRANT SELCET ON ALL TABLES IN SCHEMA public TO sec_user1;' FROM pg_database WHERE datistemplate = false;
